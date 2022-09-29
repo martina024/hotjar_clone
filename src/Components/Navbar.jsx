@@ -2,21 +2,30 @@ import React from 'react'
 import { VStack ,Flex, Heading, Spacer,Stack,Button, Menu,
   MenuButton,
   MenuList,
-  MenuItem,Image} from "@chakra-ui/react";
+  MenuItem,Image,Box} from "@chakra-ui/react";
 import {FaSun,FaMoon} from "react-icons/fa"
 import {useColorMode} from "@chakra-ui/color-mode"
 import {IconButton} from "@chakra-ui/button"
 import {ChevronDownIcon} from "@chakra-ui/icons"
-import Signin from "../Pages/SignIn";
+
+import { Link } from 'react-router-dom';
+
+
+
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   const isDark=colorMode==="dark"
   return (
-    <VStack p={5} >
+    <>
+    <Box position="sticky" top="0" >
+      <VStack p={5} >
     <Flex w="100%">
-      <Image ml="8" boxSize='2.5rem'src="https://assets.stickpng.com/images/62c9db2694890221ddd176b1.png" ></Image>
-      <Heading size="lg" fontWeight="semibold">hotjar</Heading>
+     
+      <Image  ml="10"  boxSize='2.5rem' src="https://assets.stickpng.com/images/62c9db2694890221ddd176b1.png" ></Image>
+      <Link to="/"> <Heading size="lg" fontWeight="semibold">hotjar</Heading></Link>
+   
+     
       <Menu>
       <MenuButton _disabled size="lg" bg="none" ml="8" as={Button} rightIcon={<ChevronDownIcon />}>
         Product
@@ -63,7 +72,7 @@ const Navbar = () => {
         </Menu>
 
         <Menu>
-        <MenuButton size="lg"  as={Button} rightIcon={<ChevronDownIcon />}>
+        <MenuButton size="lg" bg="none" as={Button} rightIcon={<ChevronDownIcon />}>
         Company
       </MenuButton>
         </Menu>
@@ -71,9 +80,12 @@ const Navbar = () => {
       
       <Spacer></Spacer>
     <Stack direction='row' spacing={4} align='center'>
-    <Button as='a' target='_blank'  href={<Signin />} colorScheme='teal' fontWeight='bold' variant='outline'>
+      <Link to="/signin">
+      <Button  colorScheme='teal' fontWeight='bold' variant='outline'>
         Sign in
       </Button>
+      </Link>
+    
       
       <Button colorScheme='teal' variant='solid'>
         Get started free
@@ -83,7 +95,12 @@ const Navbar = () => {
     <IconButton ml="2%" icon={isDark ? <FaSun/>:<FaMoon/>} isRound="true" onClick={toggleColorMode}></IconButton>
  
     </Flex>
- </VStack>
+  </VStack>
+ 
+    </Box>
+  
+    
+    </>
 );
   
 }

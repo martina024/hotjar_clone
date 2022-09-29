@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <>
     <Box backgroundColor="#1A202C"  >
-    <Grid gridTemplateColumns="repeat(6, 1fr) "  color="white" mt="80%" mb="20%" p={10}>
+    <Grid gridTemplateColumns="repeat(6, 1fr) "  color="white"  mb="20%" p={10}>
      
-     <Grid ml="100" columns={1} height="0px" spacingX='10px' spacingY='10px' gap={3}>
+     <Grid ml="100" columns={1} height="0px" gap={3}>
             <GridItem fontSize="20px" fontWeight="bold" >Products</GridItem>
             <GridItem color="#A6A8B3">Product tour</GridItem>
             <GridItem color="#A6A8B3">Headtmaps</GridItem>
@@ -23,7 +23,7 @@ const Footer = () => {
             <GridItem color="#A6A8B3">Dashboard</GridItem>
             <GridItem color="#A6A8B3">Trends</GridItem>
     </Grid>
-    <Grid ml="50" columns={1} height="0px"  spacingX='10px' spacingY='10px'  gap={3}>
+    <Grid ml="50" columns={1} height="0px"  gap={3}>
             <GridItem fontSize="20px" fontWeight="bold" >Why Hotjar</GridItem>
             <GridItem color="#A6A8B3">For product teams</GridItem>
             <GridItem color="#A6A8B3">For product managers</GridItem>
@@ -31,7 +31,7 @@ const Footer = () => {
             <GridItem color="#A6A8B3">For researchers</GridItem>
             <GridItem color="#A6A8B3">Case studies</GridItem>
     </Grid>
-    <Grid ml="50" columns={1} height="100px" spacingX='10px' spacingY='15px'gap={3}>
+    <Grid ml="50" columns={1} height="100px" gap={3}>
             <GridItem fontSize="20px" fontWeight="bold" >Learn</GridItem>
             <GridItem color="#A6A8B3">Guides</GridItem>
             <GridItem color="#A6A8B3">Blog</GridItem>
@@ -44,7 +44,7 @@ const Footer = () => {
             <GridItem color="#A6A8B3">Product experience insights</GridItem>
             <GridItem color="#A6A8B3">Website tracking</GridItem>
     </Grid>
-    <Grid ml="50" columns={1} height="0px" spacingX='10px' spacingY='10px'gap={3}>
+    <Grid ml="50" columns={1} height="0px" gap={3}>
             <GridItem fontSize="20px" fontWeight="bold">Company</GridItem>
             <GridItem color="#A6A8B3">About us</GridItem>
             <GridItem color="#A6A8B3">Careers</GridItem>
@@ -53,7 +53,7 @@ const Footer = () => {
             
     </Grid>
    <Spacer/>
-    <Grid columns={1} height="0px"  spacingX='10px' spacingY='10px' gap={3}>
+    <Grid columns={1} height="0px"  gap={3}>
             <GridItem fontSize="20px" fontWeight="bold" >Compliance</GridItem>
             <GridItem color="#A6A8B3">Legal overview</GridItem>
             <GridItem color="#A6A8B3">Compliance & security</GridItem>

@@ -1,24 +1,26 @@
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
-import Signin from "./Pages/SignIn";
+import React from 'react'
+import Dashboard from './Components/DashBoard'
+
+import Footer from './Components/Footer'
+import Navbar from "./Components/Navbar"
+import AllRoutes from './Pages/AllRoutes'
+import Signup from './Pages/Signup'
 
 
 
 
-function App() {
-  
-  
+const App = () => {
   return (
-    <>
-
-    <Navbar/>
-    <Signin/>
-    <Footer/>
-
-    </>
-   
+    <div>
+      
+      <Navbar/>
+     
+      <Dashboard/>
+      <AllRoutes/>
+      <Footer/>
+    </div>
   )
-   
 }
 
-export default App;
+export default App
+
