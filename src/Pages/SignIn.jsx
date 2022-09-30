@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
-import {Grid,GridItem,FormControl,Text,Input,Alert,AlertIcon,AlertTitle, Container,Flex,Box ,VStack ,Image, Heading, Button} from '@chakra-ui/react'
-
-import DashBoard from '../Components/DashBoard'
+import {Checkbox,Grid,GridItem,FormControl,Text,Input,Alert,AlertIcon,AlertTitle, Container,Flex,Box ,VStack ,Image, Heading, Button, Spacer} from '@chakra-ui/react'
+import { FaGoogle } from 'react-icons/fa'
+import DashBoard from '../Components/Dashboard'
 import Signup from './Signup'
 
 
@@ -35,22 +35,36 @@ const SignIn = () => {
     <>
     <Container
       maxW={{base:"full" , lg:"container.xl"}}
-      p={{base:2,lg:0}}
+      p={{base:3,lg:2}}
       >
-        <Flex h="auto" py={20} direction={{base:"column-reverse",lg:"row"}}>
+         <Link to="/"><Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfNoKYanul7HEWWiUdxgSDF9be8egWbZB6M21m0FoS8D9BCzvfw3dO7oXJr575lnb-xg&usqp=CAU' margin="auto" w="10%"/></Link> 
+        <Flex w="100%" direction={{base:"column-reverse",lg:"row"}} gap={5}>
+         
           
           {home ? (
-            <Box bg='white' w='40%' p={4} >
+            <Box w="50%">
    <form onSubmit={handelLogin}>
 
 
-    <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
-      <VStack>
-        <Heading>Sign In</Heading>
-        <p>Need a Hotjar account? <Link to="/signup">Sign Up</Link></p>
+    <VStack w="full" alignItems="flex-start">
+      <VStack  p={10}>
+        <Heading fontSize="30px" mr={20}>Sign In</Heading>
+       <br />
+       <Box >
+        <Button  leftIcon={<FaGoogle />} size='md'
+          height='48px'
+          width='500px'
+          border='1px'>
+        Sign up with Google
+        </Button> 
+
+       </Box>
+        
+  <br />
+  <Text w="full">Need a Hotjar account? <Link to="/signup" style={{color:'blue'}}>Sign Up</Link></Text>
       </VStack>
-      <Grid  templateColumns="repeate(1,1fr)" gap={2} w="full">
-        <GridItem colSpan={{base:2 ,lg:2}}>
+      <Grid  templateColumns="repeate(1,1fr)" gap={2} w="550px">
+        <GridItem  colSpan={{base:3 ,lg:2}}>
             <FormControl isRequired>
                 <Text>Email</Text>
                 <Input
@@ -73,9 +87,14 @@ const SignIn = () => {
             </FormControl>
         </GridItem>
         
+
+        <Checkbox size='md' colorScheme='green' >
+         Keep me sign in
+         </Checkbox>
+        
         <GridItem colSpan={{base:2 , md:2}}>
             <FormControl>
-                <Button type="submit" w="full" >Sign In</Button>
+                <Link to="/"><Button type="submit" w="full" >Sign In</Button></Link>
             </FormControl>
         </GridItem>
       </Grid>
@@ -92,15 +111,16 @@ const SignIn = () => {
 
 
     </form>
-    </Box >
+    </Box>
+   
     ):(
         <DashBoard/>
     )}
           
-  
-          <Box backgroundColor="#BEE3F8" w='80%' p={4} > 
+ 
+          
             
-            <VStack>
+            <VStack backgroundColor="#dce2f6" >
               <Box mt="30px" p={10} ml="10%">
                   <Heading fontSize="md" fontWeight="light" mb="10px" >HOTJAR GUIDES</Heading>
                   <Image w="70%" src='https://insights.hotjar.com/static/37d85d9a61db85c93d7f.png'/>
@@ -112,7 +132,7 @@ const SignIn = () => {
               </Box>
             </VStack>
           
-          </Box>
+          
           
         </Flex>
     </Container>
