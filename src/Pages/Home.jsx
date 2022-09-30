@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import Dashboard from "../Components/Dashboard";
 
 function Home() {
   return (
     <div>
-      <Link to="/login">
-        Login Page
-      </Link>
-      <Link to="/dashboard">
-        Home
-      </Link>
+      <Navbar/>
+      
+      <Dashboard/>
+      <Footer/>
     </div>
   );
 }

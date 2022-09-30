@@ -1,6 +1,6 @@
 import {Routes,Route} from "react-router-dom" ; 
 
-import DashBoard from "../Components/DashBoard"
+import Dashboard from "../Components/Dashboard"
 
 import Signup from './Signup' ; 
 
@@ -17,7 +17,7 @@ function AllRoutes() {
       <Routes>
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/signup" element={<Signup/>}/>
-        <Route path="/dashboard" element={<DashBoard/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/" element={<Home/>}/>
     
        

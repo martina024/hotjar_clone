@@ -1,8 +1,9 @@
 
 import React,{useState} from 'react'
-import { Alert,AlertIcon,AlertTitle, Button,FormControl,Grid,GridItem,Heading,Input,Text,VStack} from '@chakra-ui/react'
-import {useNavigate } from 'react-router-dom'
+import { Image,Alert,AlertIcon,AlertTitle, Button,FormControl,Grid,GridItem,Heading,Input,Text,VStack,Box} from '@chakra-ui/react'
+import {Link, useNavigate } from 'react-router-dom'
 import SignIn from './SignIn'
+import { FaGoogle } from 'react-icons/fa'
 
 
 
@@ -38,9 +39,16 @@ function handelClick(){
     <>
     {login ? (
     <form onSubmit={handelSubmit}>
+      <Link to="/"><Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfNoKYanul7HEWWiUdxgSDF9be8egWbZB6M21m0FoS8D9BCzvfw3dO7oXJr575lnb-xg&usqp=CAU' margin="auto" w="10%"/></Link> 
+      <Box w="30%" margin="auto">
+
+      
        <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
-      <VStack>
+      <VStack margin="auto" >
         <Heading>Sign Up</Heading>
+        <Button w="180%" colorScheme='facebook' leftIcon={<FaGoogle />}>
+    Sign up with Google
+  </Button>
         
       </VStack>
       <Grid  templateColumns="repeate(1,1fr)" gap={2} w="full">
@@ -84,7 +92,7 @@ function handelClick(){
             </FormControl>
         </GridItem>
       </Grid>
-      <p onClick={handelClick}>Already have an account? Sign in now.</p>
+      <p onClick={handelClick}>Already have an account? <span style={{color:"blue",cursor:"pointer"}}>Sign in now</span>.</p>
     </VStack>
 
     {flag && (
@@ -95,10 +103,14 @@ function handelClick(){
     </Alert>
     )}
 
+</Box>
+
     </form>
 ):(
     <SignIn/>
 )}
+
+
     </>
      
 

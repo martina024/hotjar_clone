@@ -81,7 +81,7 @@ const Footer = () => {
     <Grid color="#A6A8B3">
     <VStack p={5} >
     <Flex w="100%">
-      <Image ml="20" boxSize='1.5rem'src="https://assets.stickpng.com/images/62c9db2694890221ddd176b1.png" ></Image>
+      <Image ml="20" boxSize='1.5rem'src="https://yt3.ggpht.com/eH_MdhjC_DxpUtxBNXqb7fhhfKSa-nWiIQ1IqaRxD06nEbFiIRahQf5bUHE1WPpnfczXsvUdYA=s176-c-k-c0x00ffffff-no-rj" ></Image>
       <Heading size="sm" fontWeight="semibold">Copyright © 2014 - 2022 Hotjar Ltd. All rights reserved.</Heading>
       <Spacer/>
       <Heading size="sm" mr="8">Cookie info</Heading>
