@@ -1,0 +1,92 @@
+.flow{
+    align-items: center;
+    justify-content: center;
+}
+@keyframes slider-track-scroll{
+    0%{
+        left: 0px;
+    }
+    75%{
+        left: -2000px;
+    }
+    100%{
+        left: -2000px;
+    }
+    
+}
+@media (prefers-reduced-motion: no-preference) {
+    .slider {
+      animation: slider-track-scroll  20s  linear infinite ;
+      
+      
+    }
+  }
+
+.slider{
+    height: 100px;
+    margin:auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    
+}
+
+
+
+/* .slider-track{
+    animation: scroll infinite -0s linear ;
+    display: flex;
+   
+} */
+
+
+.slide{
+    height: 100vmin;
+    
+   display: grid;
+   grid-template-columns: repeat(8,1fr);
+   gap: 20px;
+   background-repeat: repeat-x
+}
+
+
+.buttons {
+    margin: 10%;
+    margin-left: -80%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 150%;
+    
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    /* margin-right: 20%; */
+    height: 300px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 10px;
+    /* moz-transition: all .4s ease-in-out; */
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    /* moz-transition: all .4s ease-in-out; */
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #e3e7e9, #e1e3d8, #a7f1cc, #dec791);
+    /* box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75); */
+    display: flex;
+    color: black;
+}
