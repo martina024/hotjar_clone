@@ -46,7 +46,7 @@ function handelClick(){
        <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
       <VStack margin="auto" >
         <Heading>Sign Up</Heading>
-        <Button w="180%" colorScheme='facebook' leftIcon={<FaGoogle />}>
+        <Button w="180%" colorScheme='messenger' leftIcon={<FaGoogle />}>
     Sign up with Google
   </Button>
         

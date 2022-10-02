@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import {useState , useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import {Checkbox,Grid,GridItem,FormControl,Text,Input,Alert,AlertIcon,AlertTitle, Container,Flex,Box ,VStack ,Image, Heading, Button, Spacer} from '@chakra-ui/react'
 import { FaGoogle } from 'react-icons/fa'
@@ -14,6 +14,15 @@ const SignIn = () => {
   const [flag,setFlag]=useState(false) 
   const [home,setHome]=useState(true)
   
+
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+ 
 
 
     function handelLogin(e){
@@ -31,7 +40,16 @@ const SignIn = () => {
         setFlag(false)
     }
     }
+
+    if(loading){
+      return(
+        <div style={{padding:"3%",marginLeft:"45%", fontWeight:"bolder",fontSize:"20px"}}>. . . . . . . loading</div>
+      )
+    }
+    
+
   return (
+    
     <>
     <Container
       maxW={{base:"full" , lg:"container.xl"}}
@@ -40,8 +58,9 @@ const SignIn = () => {
          <Link to="/"><Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfNoKYanul7HEWWiUdxgSDF9be8egWbZB6M21m0FoS8D9BCzvfw3dO7oXJr575lnb-xg&usqp=CAU' margin="auto" w="10%"/></Link> 
         <Flex w="100%" direction={{base:"column-reverse",lg:"row"}} gap={5}>
          
-          
+         
           {home ? (
+           
             <Box w="50%">
    <form onSubmit={handelLogin}>
 
@@ -51,10 +70,12 @@ const SignIn = () => {
         <Heading fontSize="30px" mr={20}>Sign In</Heading>
        <br />
        <Box >
-        <Button  leftIcon={<FaGoogle />} size='md'
+        <Button  colorScheme='messenger' leftIcon={<FaGoogle />} size='lg'
           height='48px'
-          width='500px'
-          border='1px'>
+          width='540px'
+          border='1px'
+          ml="-7%"
+          >
         Sign up with Google
         </Button> 
 
@@ -110,13 +131,16 @@ const SignIn = () => {
     )} 
 
 
+    
+    
     </form>
     </Box>
+    
    
     ):(
         <DashBoard/>
     )}
-          
+    
  
           
             
@@ -133,7 +157,7 @@ const SignIn = () => {
             </VStack>
           
           
-          
+            
         </Flex>
     </Container>
    
