@@ -4,6 +4,8 @@ import {Checkbox,Grid,GridItem,FormControl,Text,Input,Alert,AlertIcon,AlertTitle
 import { FaGoogle } from 'react-icons/fa'
 import DashBoard from '../Components/Dashboard'
 import Signup from './Signup'
+import Home from './Home'
+import Dashboard from '../Components/Dashboard'
 
 
 
@@ -25,12 +27,12 @@ const SignIn = () => {
  
 
 
-    function handelLogin(e){
+    const handelLogin=(e)=>{
         e.preventDefault()
         let mail=localStorage.getItem("Email").replace(/"/g, "")
         let pass=localStorage.getItem("Password").replace(/"/g, "")
     
-    if(!emaillog ||!passwordlog){
+    if(!emaillog || !passwordlog){
         setFlag(true)
         console.log("Empty")
     }else if(passwordlog !== pass || emaillog !==mail){
@@ -43,14 +45,15 @@ const SignIn = () => {
 
     if(loading){
       return(
-        <div style={{padding:"3%",marginLeft:"45%", fontWeight:"bolder",fontSize:"20px"}}>. . . . . . . loading</div>
+        <div style={{padding:"3%",marginLeft:"40%", fontWeight:"bolder",fontSize:"20px"}}>. . . . . . . loading</div>
       )
     }
     
 
   return (
     
-    <>
+    <div>
+        {home ? (
     <Container
       maxW={{base:"full" , lg:"container.xl"}}
       p={{base:3,lg:2}}
@@ -59,7 +62,7 @@ const SignIn = () => {
         <Flex w="100%" direction={{base:"column-reverse",lg:"row"}} gap={5}>
          
          
-          {home ? (
+        
            
             <Box w="50%">
    <form onSubmit={handelLogin}>
@@ -115,7 +118,7 @@ const SignIn = () => {
         
         <GridItem colSpan={{base:2 , md:2}}>
             <FormControl>
-                <Link to="/"><Button type="submit" w="full" >Sign In</Button></Link>
+                <Button type="submit" w="full" >Sign In</Button>
             </FormControl>
         </GridItem>
       </Grid>
@@ -136,13 +139,10 @@ const SignIn = () => {
     </form>
     </Box>
     
-   
-    ):(
-        <DashBoard/>
-    )}
+  
     
  
-          
+          <>
             
             <VStack backgroundColor="#dce2f6" >
               <Box mt="30px" p={10} ml="10%">
@@ -155,14 +155,19 @@ const SignIn = () => {
                   
               </Box>
             </VStack>
-          
-          
+            </>
+      
             
         </Flex>
     </Container>
+     
+   ):(
+    <Home/>
+)}
    
-    </>
+    </div>
   )
 }
 
 export default SignIn
+
