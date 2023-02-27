@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# HotjarClone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hotjar is a behavior analytics and user feedback service that helps website owners understand how users interact with their website. It provides heatmaps, session recordings, surveys, and other tools to help optimize website performance and user experience.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+ <h2>Netlify Link</h2>-:https://courageous-travesseiro-818b2e.netlify.app/<br/>
+ 
+ 
+ 
+Working Feautres-:
+- Creative HomePage 
+- Navbar
+- Footer
+- Signup Page
+- Login Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Tech Stack-:
+- React
+- Redux
+- Chakra UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+HOMEPAGE-:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here is the homepage which is entirely responsive and is made by using Chakra UI  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![WhatsApp Image 2023-02-28 at 02 09 10 (2)](https://user-images.githubusercontent.com/107464455/221683388-3486fbe5-ffe5-4740-9821-2781446b730e.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![WhatsApp Image 2023-02-28 at 02 09 51 (2)](https://user-images.githubusercontent.com/107464455/221683429-06992376-a5d7-41c4-95a5-a62e4987ae67.jpg)
 
-### `npm run eject`
+![WhatsApp Image 2023-02-28 at 02 10 12 (2)](https://user-images.githubusercontent.com/107464455/221683465-f51fe7e8-2ed9-4b1d-b5e0-de16845b26ff.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Login Page-:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Here user can login to proceed before purchasing the servicing, so that in future they can track their order details and track order too. If user is not registered already he/she will be redirected to signUp page to signup first.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![WhatsApp Image 2023-02-28 at 02 10 45 (2)](https://user-images.githubusercontent.com/107464455/221683590-415a3bdb-2a87-4c43-a9f8-00834e878d29.jpg)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+SignUp Page-:
 
-### Code Splitting
+Here user can signup if he/she is not already registered with us already, so that in future they can just login and proceed with their order of purchasing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+![WhatsApp Image 2023-02-28 at 02 10 28 (2)](https://user-images.githubusercontent.com/107464455/221683535-ad3f4f3c-a91f-4d93-80bb-9af6c868a6b6.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
